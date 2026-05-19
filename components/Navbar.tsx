@@ -102,6 +102,7 @@ export default function Navbar() {
           className="md:hidden p-2 text-slate-400 hover:text-white"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
+          aria-expanded={menuOpen}
         >
           {menuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>

@@ -26,10 +26,14 @@ export default function ContactSection() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
-      if (!res.ok) throw new Error("Failed to send");
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data?.error || "Failed to send");
+      }
       setSent(true);
-    } catch {
-      setError("Something went wrong. Please try again or email me directly.");
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : "";
+      setError(msg || "Something went wrong. Please try again or email me directly.");
     } finally {
       setLoading(false);
     }
@@ -188,10 +192,12 @@ export default function ContactSection() {
                     <input
                       type="text"
                       required
+                      maxLength={100}
+                      disabled={loading}
                       value={form.name}
                       onChange={(e) => setForm({ ...form, name: e.target.value })}
                       placeholder="John Doe"
-                      className="w-full px-4 py-2.5 text-sm bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-slate-600 focus:outline-none focus:border-indigo-500/50 transition-colors"
+                      className="w-full px-4 py-2.5 text-sm bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-slate-600 focus:outline-none focus:border-indigo-500/50 transition-colors disabled:opacity-50"
                     />
                   </div>
                   <div>
@@ -199,10 +205,12 @@ export default function ContactSection() {
                     <input
                       type="email"
                       required
+                      maxLength={254}
+                      disabled={loading}
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
                       placeholder="john@example.com"
-                      className="w-full px-4 py-2.5 text-sm bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-slate-600 focus:outline-none focus:border-indigo-500/50 transition-colors"
+                      className="w-full px-4 py-2.5 text-sm bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-slate-600 focus:outline-none focus:border-indigo-500/50 transition-colors disabled:opacity-50"
                     />
                   </div>
                 </div>
@@ -212,10 +220,12 @@ export default function ContactSection() {
                   <input
                     type="text"
                     required
+                    maxLength={150}
+                    disabled={loading}
                     value={form.subject}
                     onChange={(e) => setForm({ ...form, subject: e.target.value })}
                     placeholder="Project inquiry, Consulting, etc."
-                    className="w-full px-4 py-2.5 text-sm bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-slate-600 focus:outline-none focus:border-indigo-500/50 transition-colors"
+                    className="w-full px-4 py-2.5 text-sm bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-slate-600 focus:outline-none focus:border-indigo-500/50 transition-colors disabled:opacity-50"
                   />
                 </div>
 
@@ -224,10 +234,12 @@ export default function ContactSection() {
                   <textarea
                     required
                     rows={5}
+                    maxLength={5000}
+                    disabled={loading}
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     placeholder="Tell me about your project or what you need help with..."
-                    className="w-full px-4 py-2.5 text-sm bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-slate-600 focus:outline-none focus:border-indigo-500/50 transition-colors resize-none"
+                    className="w-full px-4 py-2.5 text-sm bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-slate-600 focus:outline-none focus:border-indigo-500/50 transition-colors resize-none disabled:opacity-50"
                   />
                 </div>
 
