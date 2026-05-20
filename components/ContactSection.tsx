@@ -118,7 +118,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-xs text-slate-500 mb-0.5">Location</p>
-                  <p className="text-white text-sm">Toronto, ON, Canada (Remote OK)</p>
+                  <p className="text-white text-sm">Toronto, ON, Canada — Remote Worldwide</p>
                 </div>
               </div>
             </address>
@@ -154,7 +154,7 @@ export default function ContactSection() {
                 <span className="text-emerald-400 text-sm font-semibold">Currently available</span>
               </div>
               <p className="text-slate-500 text-xs">
-                Open to freelance projects, consulting engagements, and full-time positions — available now.
+                Open to remote freelance, consulting, and full-time opportunities worldwide — available now.
               </p>
             </div>
           </motion.div>

@@ -114,10 +114,11 @@ export default function AboutSection() {
             <div className="space-y-4 text-slate-400 leading-relaxed">
               <p>
                 Hi! I&apos;m <span className="text-white font-medium">Udip Mandora</span>, a full-stack
-                web developer and project manager based in Toronto, ON. I hold
-                two post-graduate diplomas from Humber College — one in Web
-                Development and one in Project Management — plus a Bachelor&apos;s
-                in Software Development from Ganpat University.
+                web developer and project manager based in Toronto, ON —
+                available for remote work worldwide. I hold two post-graduate
+                diplomas from Humber College — one in Web Development and one
+                in Project Management — plus a Bachelor&apos;s in Software
+                Development from Ganpat University.
               </p>
               <p>
                 On the development side, I specialize in full-stack applications

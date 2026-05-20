@@ -121,8 +121,6 @@ export default function OgImage() {
             color: "#475569",
           }}
         >
-          <span style={{ color: "#64748b" }}>Toronto, ON</span>
-          <span style={{ color: "#1e293b" }}>·</span>
           <span style={{ color: "#64748b" }}>React</span>
           <span style={{ color: "#1e293b" }}>·</span>
           <span style={{ color: "#64748b" }}>Next.js</span>
@@ -131,7 +129,7 @@ export default function OgImage() {
           <span style={{ color: "#1e293b" }}>·</span>
           <span style={{ color: "#64748b" }}>Python</span>
           <span style={{ color: "#1e293b" }}>·</span>
-          <span style={{ color: "#4f46e5", fontWeight: 600 }}>Available for hire</span>
+          <span style={{ color: "#4f46e5", fontWeight: 600 }}>Remote · Available Worldwide</span>
         </div>
       </div>
     ),

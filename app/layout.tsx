@@ -18,38 +18,49 @@ export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
 
   title: {
-    default: "Udip Mandora | Full-Stack Developer & Project Manager — Toronto",
+    default: "Udip Mandora | Full-Stack Developer & Project Manager",
     template: "%s | Udip Mandora",
   },
 
   description:
-    "Udip Mandora — Full-Stack Developer & Project Manager in Toronto. React, Next.js, Node.js, Python. Available for freelance, consulting & full-time opportunities.",
+    "Udip Mandora — Full-Stack Developer & Project Manager. React, Next.js, Node.js, Python. Available worldwide for remote freelance, consulting & full-time roles.",
 
   keywords: [
     // Branded
     "Udip Mandora",
     "Udip Mandora Developer",
     "Udip Mandora Portfolio",
-    // Role — global
+    // Role — global (no location)
     "Full-Stack Developer",
     "Full-Stack Web Developer",
     "Project Manager",
     "Web Developer",
     "Software Developer",
-    "Freelance Developer",
-    "Freelance Web Developer",
     "Technical Project Manager",
-    // Role + Toronto / Canada
+    "Agile Project Manager",
+    // Remote-first keywords
+    "Remote Full-Stack Developer",
+    "Remote Web Developer",
+    "Remote Project Manager",
+    "Remote React Developer",
+    "Remote Next.js Developer",
+    "Remote MERN Stack Developer",
+    "Hire Remote Developer",
+    "Hire Remote Full-Stack Developer",
+    "Freelance Full-Stack Developer",
+    "Freelance Web Developer",
+    "Freelance React Developer",
+    "Freelance Next.js Developer",
+    "Freelance Developer for Hire",
+    // Role + Toronto / Canada (keep for local SEO)
     "Full-Stack Developer Toronto",
     "Full-Stack Web Developer Toronto",
     "Web Developer Toronto",
     "Project Manager Toronto",
-    "Software Developer Toronto",
     "Freelance Web Developer Toronto",
-    "Hire Web Developer Toronto",
     "Full-Stack Developer Canada",
-    "Technical Project Manager Toronto",
-    // Tech stack
+    "Remote Developer Canada",
+    // Tech stack — global
     "React Developer",
     "Next.js Developer",
     "Node.js Developer",
@@ -57,14 +68,13 @@ export const metadata: Metadata = {
     "MERN Stack Developer",
     "TypeScript Developer",
     "JavaScript Developer",
-    "React Developer Toronto",
-    "Next.js Developer Toronto",
-    "MERN Stack Developer Toronto",
+    "React Next.js Developer",
+    "Full-Stack JavaScript Developer",
     // Dual-role differentiator
     "Full-Stack Developer and Project Manager",
-    "Full-Stack Developer and Project Manager Toronto",
-    "Agile Developer Toronto",
     "Developer with Project Management Experience",
+    "Technical Lead Developer",
+    "Full-Stack Developer Agile",
     // Skills
     "React",
     "Next.js",
@@ -107,16 +117,16 @@ export const metadata: Metadata = {
     locale: "en_CA",
     url: BASE_URL,
     siteName: "Udip Mandora Portfolio",
-    title: "Udip Mandora | Full-Stack Developer & Project Manager — Toronto",
+    title: "Udip Mandora | Full-Stack Developer & Project Manager",
     description:
-      "Full-Stack Web Developer and Project Manager based in Toronto, ON. Specializing in React, Next.js, Node.js, and end-to-end Agile project delivery. Available for freelance, consulting & full-time roles.",
+      "Full-Stack Web Developer and Project Manager based in Toronto, ON — available worldwide for remote work. Specializing in React, Next.js, Node.js, and end-to-end Agile project delivery.",
   },
 
   twitter: {
     card: "summary_large_image",
     title: "Udip Mandora | Full-Stack Developer & Project Manager",
     description:
-      "Full-Stack Developer & Project Manager in Toronto. React · Next.js · Node.js · Python. Available for hire.",
+      "Full-Stack Developer & Project Manager. React · Next.js · Node.js · Python. Available worldwide for remote work.",
   },
 };
 
@@ -134,13 +144,21 @@ const jsonLd = [
     image: `${BASE_URL}/opengraph-image`,
     jobTitle: ["Full-Stack Web Developer", "Project Manager"],
     description:
-      "Full-Stack Web Developer and Project Manager based in Toronto, ON, Canada. Specializing in React, Next.js, Node.js, and end-to-end Agile project delivery.",
+      "Full-Stack Web Developer and Project Manager based in Toronto, ON, Canada — available worldwide for remote work. Specializing in React, Next.js, Node.js, and end-to-end Agile project delivery.",
     email: "udipmandora42@gmail.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Toronto",
       addressRegion: "ON",
       addressCountry: "CA",
+    },
+    workLocation: {
+      "@type": "VirtualLocation",
+      name: "Remote — Available Worldwide",
+    },
+    seeks: {
+      "@type": "Demand",
+      name: "Remote freelance, consulting, and full-time opportunities worldwide",
     },
     sameAs: [
       "https://github.com/Udip-Mandora",
