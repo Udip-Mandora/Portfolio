@@ -13,7 +13,7 @@ export default function ContactSection() {
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "", website: "" });
   const [copied, setCopied] = useState(false);
 
   const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
@@ -175,7 +175,7 @@ export default function ContactSection() {
                   Thanks for reaching out. I&apos;ll get back to you within 24 hours.
                 </p>
                 <button
-                  onClick={() => { setSent(false); setForm({ name: "", email: "", subject: "", message: "" }); }}
+                  onClick={() => { setSent(false); setForm({ name: "", email: "", subject: "", message: "", website: "" }); }}
                   className="mt-6 px-4 py-2 text-sm text-indigo-400 hover:text-indigo-300 border border-indigo-500/30 rounded-lg transition-colors"
                 >
                   Send another message
@@ -242,6 +242,18 @@ export default function ContactSection() {
                     className="w-full px-4 py-2.5 text-sm bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-slate-600 focus:outline-none focus:border-indigo-500/50 transition-colors resize-none disabled:opacity-50"
                   />
                 </div>
+
+                {/* Honeypot — visually hidden, never filled by real users */}
+                <input
+                  type="text"
+                  name="website"
+                  value={form.website}
+                  onChange={(e) => setForm({ ...form, website: e.target.value })}
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", overflow: "hidden", opacity: 0 }}
+                />
 
                 {error && (
                   <p className="text-red-400 text-sm">{error}</p>
