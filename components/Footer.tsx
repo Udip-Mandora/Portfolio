@@ -24,7 +24,7 @@ export default function Footer() {
           </a>
 
           {/* Quick nav */}
-          <nav className="flex flex-wrap gap-x-6 gap-y-2">
+          <nav className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Footer navigation">
             {quickLinks.map((link) => (
               <a
                 key={link.href}

@@ -86,7 +86,7 @@ export default function ContactSection() {
               </p>
             </div>
 
-            <div className="space-y-4">
+            <address className="not-italic space-y-4">
               {/* Email row with copy button */}
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center shrink-0">
@@ -121,7 +121,7 @@ export default function ContactSection() {
                   <p className="text-white text-sm">Toronto, ON, Canada (Remote OK)</p>
                 </div>
               </div>
-            </div>
+            </address>
 
             {/* Social */}
             <div>

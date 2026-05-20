@@ -77,7 +77,7 @@ function ProjectCard({ project, delay, isInView }: {
     : project.description;
 
   return (
-    <motion.div
+    <motion.article
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay }}
@@ -160,7 +160,7 @@ function ProjectCard({ project, delay, isInView }: {
           </a>
         )}
       </div>
-    </motion.div>
+    </motion.article>
   );
 }
 

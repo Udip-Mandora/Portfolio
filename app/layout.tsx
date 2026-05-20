@@ -12,32 +12,258 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const BASE_URL = "https://udipmandora.com";
+
 export const metadata: Metadata = {
-  title: "Udip Mandora | Web Developer & Project Manager",
+  metadataBase: new URL(BASE_URL),
+
+  title: {
+    default: "Udip Mandora | Full-Stack Developer & Project Manager — Toronto",
+    template: "%s | Udip Mandora",
+  },
+
   description:
-    "Portfolio of Udip Mandora — Full-Stack Web Developer and Project Manager specializing in building scalable web applications and leading high-performing teams.",
-  metadataBase: new URL("https://udipmandora.com"),
+    "Udip Mandora — Full-Stack Developer & Project Manager in Toronto. React, Next.js, Node.js, Python. Available for freelance, consulting & full-time opportunities.",
+
+  keywords: [
+    // Branded
+    "Udip Mandora",
+    "Udip Mandora Developer",
+    "Udip Mandora Portfolio",
+    // Role — global
+    "Full-Stack Developer",
+    "Full-Stack Web Developer",
+    "Project Manager",
+    "Web Developer",
+    "Software Developer",
+    "Freelance Developer",
+    "Freelance Web Developer",
+    "Technical Project Manager",
+    // Role + Toronto / Canada
+    "Full-Stack Developer Toronto",
+    "Full-Stack Web Developer Toronto",
+    "Web Developer Toronto",
+    "Project Manager Toronto",
+    "Software Developer Toronto",
+    "Freelance Web Developer Toronto",
+    "Hire Web Developer Toronto",
+    "Full-Stack Developer Canada",
+    "Technical Project Manager Toronto",
+    // Tech stack
+    "React Developer",
+    "Next.js Developer",
+    "Node.js Developer",
+    "Python Developer",
+    "MERN Stack Developer",
+    "TypeScript Developer",
+    "JavaScript Developer",
+    "React Developer Toronto",
+    "Next.js Developer Toronto",
+    "MERN Stack Developer Toronto",
+    // Dual-role differentiator
+    "Full-Stack Developer and Project Manager",
+    "Full-Stack Developer and Project Manager Toronto",
+    "Agile Developer Toronto",
+    "Developer with Project Management Experience",
+    // Skills
+    "React",
+    "Next.js",
+    "Node.js",
+    "TypeScript",
+    "Python",
+    "PHP",
+    "Laravel",
+    "MongoDB",
+    "PostgreSQL",
+    "MySQL",
+    "Agile",
+    "Scrum",
+    "PMBOK",
+  ],
+
+  alternates: {
+    canonical: BASE_URL,
+  },
+
+  authors: [{ name: "Udip Mandora", url: BASE_URL }],
+  creator: "Udip Mandora",
+  publisher: "Udip Mandora",
+  category: "technology",
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
   openGraph: {
     type: "website",
-    url: "https://udipmandora.com",
-    title: "Udip Mandora | Web Developer & Project Manager",
-    description:
-      "Full-Stack Web Developer and Project Manager based in Toronto, ON. Specializing in React, Next.js, Node.js, and end-to-end project delivery.",
+    locale: "en_CA",
+    url: BASE_URL,
     siteName: "Udip Mandora Portfolio",
+    title: "Udip Mandora | Full-Stack Developer & Project Manager — Toronto",
+    description:
+      "Full-Stack Web Developer and Project Manager based in Toronto, ON. Specializing in React, Next.js, Node.js, and end-to-end Agile project delivery. Available for freelance, consulting & full-time roles.",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Udip Mandora | Web Developer & Project Manager",
+    title: "Udip Mandora | Full-Stack Developer & Project Manager",
     description:
-      "Full-Stack Web Developer and Project Manager based in Toronto, ON. Specializing in React, Next.js, Node.js, and end-to-end project delivery.",
+      "Full-Stack Developer & Project Manager in Toronto. React · Next.js · Node.js · Python. Available for hire.",
   },
-  keywords: [
-    "Udip Mandora", "Full-Stack Developer", "Project Manager", "Web Developer",
-    "React", "Next.js", "Node.js", "Toronto", "Portfolio",
-  ],
-  authors: [{ name: "Udip Mandora", url: "https://udipmandora.com" }],
-  robots: { index: true, follow: true },
 };
+
+// ── JSON-LD Structured Data ────────────────────────────────────────────────
+// Three interlocking schemas: Person, WebSite, and ProfilePage.
+// Google uses these to understand who this page is about and to generate
+// rich results (knowledge panel, site links, etc.).
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${BASE_URL}/#person`,
+    name: "Udip Mandora",
+    url: BASE_URL,
+    image: `${BASE_URL}/opengraph-image`,
+    jobTitle: ["Full-Stack Web Developer", "Project Manager"],
+    description:
+      "Full-Stack Web Developer and Project Manager based in Toronto, ON, Canada. Specializing in React, Next.js, Node.js, and end-to-end Agile project delivery.",
+    email: "udipmandora42@gmail.com",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Toronto",
+      addressRegion: "ON",
+      addressCountry: "CA",
+    },
+    sameAs: [
+      "https://github.com/Udip-Mandora",
+      "https://www.linkedin.com/in/udip-mandora/",
+    ],
+    knowsAbout: [
+      "Full-Stack Web Development",
+      "Project Management",
+      "Agile Methodology",
+      "Scrum",
+      "React",
+      "Next.js",
+      "Node.js",
+      "TypeScript",
+      "JavaScript",
+      "Python",
+      "PHP",
+      "Laravel",
+      "C#",
+      "ASP.NET Core",
+      "MongoDB",
+      "PostgreSQL",
+      "MySQL",
+      "PMBOK",
+      "Risk Analysis",
+      "Monte-Carlo Analysis",
+    ],
+    alumniOf: [
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Humber College of Technology",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Toronto",
+          addressRegion: "ON",
+          addressCountry: "CA",
+        },
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Ganpat University",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Ahmedabad",
+          addressRegion: "Gujarat",
+          addressCountry: "IN",
+        },
+      },
+    ],
+    hasCredential: [
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "Post-Graduate Diploma in Project Management",
+        credentialCategory: "PostGraduateDiploma",
+        recognizedBy: {
+          "@type": "CollegeOrUniversity",
+          name: "Humber College of Technology",
+        },
+        dateCreated: "2024",
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "Post-Graduate Diploma in Web Development",
+        credentialCategory: "PostGraduateDiploma",
+        recognizedBy: {
+          "@type": "CollegeOrUniversity",
+          name: "Humber College of Technology",
+        },
+        dateCreated: "2023",
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "Bachelor of Science in Software Development",
+        credentialCategory: "BachelorDegree",
+        recognizedBy: {
+          "@type": "CollegeOrUniversity",
+          name: "Ganpat University",
+        },
+        dateCreated: "2021",
+      },
+    ],
+    hasOccupation: {
+      "@type": "Occupation",
+      name: "Full-Stack Web Developer",
+      occupationLocation: {
+        "@type": "City",
+        name: "Toronto",
+      },
+      skills:
+        "React, Next.js, Node.js, TypeScript, Python, PHP, Laravel, C#, ASP.NET Core, MongoDB, PostgreSQL, MySQL",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${BASE_URL}/#website`,
+    url: BASE_URL,
+    name: "Udip Mandora — Portfolio",
+    description:
+      "Portfolio of Udip Mandora, Full-Stack Web Developer and Project Manager based in Toronto, ON.",
+    author: { "@id": `${BASE_URL}/#person` },
+    inLanguage: "en-CA",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": `${BASE_URL}/#profilepage`,
+    url: BASE_URL,
+    name: "Udip Mandora — Full-Stack Developer & Project Manager Portfolio",
+    about: { "@id": `${BASE_URL}/#person` },
+    mainEntity: { "@id": `${BASE_URL}/#person` },
+    inLanguage: "en-CA",
+    dateModified: new Date().toISOString().split("T")[0],
+  },
+];
+
+// Escape < > & so the inline JSON can't break out of the <script> tag.
+function safeJsonLd(obj: object): string {
+  return JSON.stringify(obj)
+    .replace(/</g, "\\u003c")
+    .replace(/>/g, "\\u003e")
+    .replace(/&/g, "\\u0026");
+}
 
 export default function RootLayout({
   children,
@@ -51,6 +277,10 @@ export default function RootLayout({
     >
       <body className="min-h-screen bg-[#0a0a0f] text-slate-200">
         {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }}
+        />
       </body>
     </html>
   );

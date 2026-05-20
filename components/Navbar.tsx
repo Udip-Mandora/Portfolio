@@ -65,7 +65,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-1">
+        <nav className="hidden md:flex items-center gap-1" aria-label="Main navigation">
           {navLinks.map((link) => {
             const isActive = activeSection === link.href.slice(1);
             return (
@@ -117,7 +117,7 @@ export default function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-[#0d0d16] border-b border-white/5"
           >
-            <nav className="px-6 py-4 flex flex-col gap-1">
+            <nav className="px-6 py-4 flex flex-col gap-1" aria-label="Mobile navigation">
               {navLinks.map((link) => {
                 const isActive = activeSection === link.href.slice(1);
                 return (

@@ -117,14 +117,14 @@ export default function ExperienceSection() {
                     {/* Dot */}
                     <div className="absolute left-[13px] top-2 w-3 h-3 rounded-full border-2 border-indigo-500 bg-[#0a0a0f]" />
 
-                    <div className="p-5 rounded-xl bg-white/3 border border-white/8 hover:border-indigo-500/30 transition-colors">
+                    <article className="p-5 rounded-xl bg-white/3 border border-white/8 hover:border-indigo-500/30 transition-colors">
                       <div className="flex items-start justify-between gap-2 mb-1">
                         <h4 className="text-white font-semibold text-sm leading-snug">
                           {exp.role}
                         </h4>
-                        <span className="shrink-0 text-xs text-slate-600 whitespace-nowrap">
+                        <time className="shrink-0 text-xs text-slate-600 whitespace-nowrap">
                           {exp.period}
-                        </span>
+                        </time>
                       </div>
                       <p className="text-indigo-400 text-xs font-medium mb-3">
                         {exp.company} · {exp.type}
@@ -142,7 +142,7 @@ export default function ExperienceSection() {
                           </span>
                         ))}
                       </div>
-                    </div>
+                    </article>
                   </motion.div>
                 ))}
               </div>
@@ -177,14 +177,14 @@ export default function ExperienceSection() {
                   >
                     <div className="absolute left-[13px] top-2 w-3 h-3 rounded-full border-2 border-violet-500 bg-[#0a0a0f]" />
 
-                    <div className="p-5 rounded-xl bg-white/3 border border-white/8 hover:border-violet-500/30 transition-colors">
+                    <article className="p-5 rounded-xl bg-white/3 border border-white/8 hover:border-violet-500/30 transition-colors">
                       <div className="flex items-start justify-between gap-2 mb-1">
                         <h4 className="text-white font-semibold text-sm leading-snug">
                           {edu.degree}
                         </h4>
-                        <span className="shrink-0 text-xs text-slate-600 whitespace-nowrap">
+                        <time className="shrink-0 text-xs text-slate-600 whitespace-nowrap">
                           {edu.period}
-                        </span>
+                        </time>
                       </div>
                       <p className="text-violet-400 text-xs font-medium mb-3">
                         {edu.school}
@@ -192,7 +192,7 @@ export default function ExperienceSection() {
                       <p className="text-slate-500 text-xs leading-relaxed">
                         {edu.description}
                       </p>
-                    </div>
+                    </article>
                   </motion.div>
                 ))}
               </div>
