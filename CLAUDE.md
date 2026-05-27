@@ -81,6 +81,7 @@ All links open in `target="_blank"` with `rel="noopener noreferrer"`.
 |----------|-----|---------|
 | GitHub | github.com/Udip-Mandora | Hero, Contact |
 | LinkedIn | linkedin.com/in/udip-mandora/ | Hero, Contact |
+| Medium | medium.com/@dpschzgk | Hero, Contact |
 | Email (mailto) | udipmandora42@gmail.com | Contact section |
 
 ---

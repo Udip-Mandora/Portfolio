@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { ArrowDown, GitBranch, Briefcase, Download, ArrowRight } from "lucide-react";
+import { ArrowDown, GitBranch, Briefcase, Download, ArrowRight, BookOpen } from "lucide-react";
 
 const roles = ["Full-Stack Developer", "Project Manager", "AI Builder", "Problem Solver"];
 
@@ -179,6 +179,7 @@ export default function HeroSection() {
           {[
             { icon: GitBranch, href: "https://github.com/Udip-Mandora", label: "GitHub" },
             { icon: Briefcase, href: "https://www.linkedin.com/in/udip-mandora/", label: "LinkedIn" },
+            { icon: BookOpen, href: "https://medium.com/@dpschzgk", label: "Medium" },
           ].map(({ icon: Icon, href, label }) => (
             <a
               key={label}

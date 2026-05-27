@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { Mail, MapPin, Send, GitBranch, Briefcase, CheckCircle, Copy, Check } from "lucide-react";
+import { Mail, MapPin, Send, GitBranch, Briefcase, CheckCircle, Copy, Check, BookOpen } from "lucide-react";
 
 const EMAIL = "udipmandora42@gmail.com";
 
@@ -132,6 +132,7 @@ export default function ContactSection() {
                 {[
                   { icon: GitBranch, label: "GitHub", href: "https://github.com/Udip-Mandora" },
                   { icon: Briefcase, label: "LinkedIn", href: "https://www.linkedin.com/in/udip-mandora/" },
+                  { icon: BookOpen, label: "Medium", href: "https://medium.com/@dpschzgk" },
                 ].map(({ icon: Icon, label, href }) => (
                   <a
                     key={label}
