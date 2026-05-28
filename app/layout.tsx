@@ -288,7 +288,7 @@ const jsonLd = [
     about: { "@id": `${BASE_URL}/#person` },
     mainEntity: { "@id": `${BASE_URL}/#person` },
     inLanguage: "en-CA",
-    dateModified: new Date().toISOString().split("T")[0],
+    dateModified: "2026-05-28T00:00:00Z",
   },
 ];
 
