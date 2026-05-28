@@ -4,7 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: "https://udipmandora.com",
-      lastModified: new Date(),
+      lastModified: "2026-05-28",
       changeFrequency: "monthly",
       priority: 1,
     },
